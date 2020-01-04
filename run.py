@@ -13,11 +13,6 @@ ap.add_argument("-r", "--recursion",required=True,help="Recursion level for reco
 
 args = vars(ap.parse_args())
 
-
-# api_key = '5cede677001d99db064959278cb331c4'
-# main_domain = '4chan.org'
-# recursion = 0
-
 def get_codes(discovered_codes, domain):
     codes = []
     url = "https://" + domain
@@ -37,7 +32,6 @@ def get_codes(discovered_codes, domain):
 def get_domains(parent,codes):
     discovered_domains = []
     for code in codes:
-        print()
         url = 'https://publicwww.com/websites/{}/?export=csvu&key={}'.format(code, args['api_key'])
         c = pd.read_csv(url)
         if len(c.values) > 100:
