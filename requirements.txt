@@ -6,7 +6,7 @@ colorama==0.4.3
 decorator==4.4.1
 idna==2.8
 networkx==2.4
-numpy==1.18.0
+numpy==1.22.0
 pandas==0.25.3
 pkg-resources==0.0.0
 python-dateutil==2.8.1
